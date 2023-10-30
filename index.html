@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>MURUGAN CINEMAS</title>
+   <link rel="stylesheet" type="text/css" href="electronic.css">
+</head>
+
+<body background="background.jpg">
+   <center><h1><I>MURUGA MULTIPLEX</h1></center>
+   <div class="container">
+      <div class="juice-types">
+         <div class="juice-card">
+            <center><h3>LE0</h3></center>
+            <center><img src=1.jpg width=150 height=90></center>
+            <center><button onclick="displayJuiceDetails('LEO')">BOOKIG OPEN</button></center>
+         </div>
+         <div class="juice-card">
+            <h3>CAPTAIN MILLER</h3>
+            <center><img src=2.jpg width=150 height=90></center>
+            <button onclick="displayJuiceDetails('CAPTAIN MILLER')">BOOKIG OPEN</button>
+         </div>
+         <div class="juice-card">
+            <h3>THANGALAAN</h3>
+            <center><img src=3.jpg width=150 height=90></center>
+            <button onclick="displayJuiceDetails('THANGALAAN')">BOOKIG OPEN</button>
+         </div>
+      </div>
+   </div>
+        <h1><p><center><B><I>
+   
+   <div id="juiceDetailsContainer" class="juice-details-container" style="display: none;">
+      <h3 id="juiceType"></h3>
+      <p>SECOND CLASS: RS-170/-</p>
+      <p>FIRST CLASS: Rs-200/-</p>
+      <button onclick="displayPurchase()">Purchase</button>
+   </div>
+
+    <div id="purchaseContainer" class="purchase-container" style="display: none;">
+      <h3>Purchase</h3>
+      <p>Customer Name: <input type="text" id="customerName"></p>
+      <p>Buying item: <span id="juiceTypePurchase"></span></p>
+      <p>Firstclass: <input type="checkbox" id="Firstclass"></p>
+      <button onclick="displayPayment()">Make Payment</button>
+
+   </div>
+
+   <div id="paymentContainer" class="payment-container" style="display: none;">
+      <h3>Payment</h3>
+      <p>Buying item: <span id="juiceTypePayment"></span></p>
+      <p>Customer: <span id="customerDetails"></span></p>
+      <p>Price: <span id="price"></span></p>
+      <h4>Enter Card Details:</h4>
+      <input type="text" placeholder="Card Number">
+      <input type="text" placeholder="CVV">
+      <button onclick="returnHome()">Pay</button>
+   </div>
+
+   <div id="homeContainer" class="home-container" style="display: none;">
+      <p><h2>Thank you for your purchase!<h2></p> 
+   </div>
+
+   <script src="electronic.js"></script>
+</body>
+
+</html>
